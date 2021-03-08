@@ -1,0 +1,7 @@
+mkdir -p ~/Chef/cookbooks && cd ~/Chef/cookbooks
+
+chef generate cookbook book1
+
+chef generate template book1 index.html
+
+sudo chef-client --local-mode --runlist 'recipe[book1]'
